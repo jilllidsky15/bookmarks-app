@@ -66,13 +66,13 @@ class App extends Component {
           <Nav />
           <div className='content' aria-live='polite'>
             <Route
-              path='/add-bookmark'
-              component={AddBookmark}
-            />
-            <Route
               exact
               path='/'
               component={BookmarkList}
+            />
+            <Route
+              path='/add-bookmark'
+              component={AddBookmark}
             />
           </div>
         </BookmarksContext.Provider>
