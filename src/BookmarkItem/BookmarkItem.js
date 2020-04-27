@@ -7,11 +7,11 @@ import config from '../config';
 import './BookmarkItem.css';
 
 function deleteBookmarkRequest(bookmarkId, cb) {
-  fetch(config.API_ENDPOINT + `/${bookmarkId}`, {
+  fetch(`${config.API_ENDPOINT}/api/bookmarks/${bookmarkId}`, {
     method: 'DELETE',
     headers: {
       'content-type': 'application/json',
-      'authorization': `bearer ${config.API_KEY}`
+      'authorization': `Bearer ${config.API_KEY}`
     }
   })
     .then(res => {
